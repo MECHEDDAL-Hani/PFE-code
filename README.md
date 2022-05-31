@@ -1,4 +1,4 @@
-# All the Steps to the create Project and run it
+# All the Steps to the create the project and run it
 
 ## 1 Second DataBase (with indexing)
 
