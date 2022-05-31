@@ -1,6 +1,6 @@
-# All Step i made for create Project and run it
+# All the Steps to the create Project and run it
 
-## 1 Secend DataBase (with indexing)
+## 1 Second DataBase (with indexing)
 
 ### 1.1 Create necessaries folder
 
@@ -8,7 +8,7 @@
 mkdir -p /home/hani/dev/DB_Two /home/hani/dev/ssl
 ```
 
-### 1.2 Create ssl certificate
+### 1.2 Create SSL certificate
 
 <!-- * https://www.openssl.org/docs/man1.1.1/man1/openssl-rand.html -->
 ```shell
@@ -16,7 +16,7 @@ openssl rand -base64 741 > /home/hani/dev/ssl/server.pem
 chmod 600 /home/hani/dev/ssl/server.pem
 ```
 
-### 1.3 lunch first mongod service
+### 1.3 Lunch first mongod service
 
 Start mongod process
 
@@ -36,7 +36,7 @@ Stop mongod process
 killall mongod
 ```
 
-and i create root user
+Create root user
 
 ```js
 use("admin");
@@ -56,13 +56,13 @@ and now connect with this commend
 mongo --port 27010 --username root --password root
 ```
 
-and the svr is
+and the SVR is
 
 ```js
 "mongodb://root:root@127.0.0.1:27010/myDB?authSource=admin"
 ```
 
-### 1.4 Creat index
+### 1.4 Create index
 
 and now we create different  index for all collection
 
@@ -104,7 +104,7 @@ mongoexport --uri="mongodb://root:root@127.0.0.1:27010/myDB?authSource=admin"  -
 
 ```
 
-and now we test different queries, just for sure its correct
+and now we test different queries, just to make sure its correct
 
 - first with command line
 
@@ -154,7 +154,7 @@ Stop mongod process
 killall mongod
 ```
 
-and i create root user
+Create root user
 
 ```js
 use("admin");
@@ -167,13 +167,13 @@ db.createUser({
 exit();
 ```
 
-and now connect with this commend
+Connect with this commend
 
 ```shell
 mongo --port 27001 --username root --password root
 ```
 
-and the svr is
+and the SVR is
 
 ```js
 "mongodb://root:root@127.0.0.1:27001/myDB?authSource=admin"
